@@ -1,4 +1,19 @@
-![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
+# Quasar App
 
-# Quasar Framework PWA
-WORK IN PROGRESS; PWA Boilerplate / Starter kit
+> A Quasar project
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:8080
+$ quasar dev
+
+# build for production with minification
+$ quasar build
+
+# lint code
+$ quasar lint
+```
