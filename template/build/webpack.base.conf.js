@@ -59,7 +59,13 @@ module.exports = {
           loaders: merge({js: 'babel-loader'}, cssUtils.styleLoaders({
             sourceMap: useCssSourceMap,
             extract: env.prod
-          }))
+          })),
+          transformToRequire: {
+            video: 'src',
+            source: 'src',
+            img: 'src',
+            image: 'xlink:href'
+          }
         }
       },
       {
@@ -85,13 +91,6 @@ module.exports = {
     ]
   },
   plugins: [
-    /*
-      Take note!
-      Uncomment if you wish to load only one Moment locale:
-
-      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
-    */
-
     new webpack.DefinePlugin({
       'process.env': config[env.prod ? 'build' : 'dev'].env,
       'DEV': env.dev,

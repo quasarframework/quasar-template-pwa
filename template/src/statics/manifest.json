@@ -1,14 +1,14 @@
 {
-  "name": "Your Project Name",
-  "short_name": "Exempl",
+  "name": "Quasar App",
+  "short_name": "quasar-pwa",
   "icons": [
     {
-      "src": "android-chrome-192x192.png",
+      "src": "/statics/icon/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "android-chrome-512x512.png",
+      "src": "/statics/icon/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -16,5 +16,5 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#027be3"
 }

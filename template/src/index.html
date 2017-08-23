@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=5, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Quasar App</title>
-
-    <!-- Add to home screen for Android and modern mobile browsers -->
-    <link rel="manifest" href="statics/manifest.json">
-    <meta name="theme-color" content="#4DBA87">
+    <title>Quasar PWA App</title>
+    <link rel="icon" href="statics/quasar-logo.png" type="image/x-icon">
+    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>statics/manifest.json">
 
     <!-- Add to home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <meta name="apple-mobile-web-app-title" content="{{ name }}">
+    <link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/apple-touch-icon-152x152.png">
     <!-- Add to home screen for Windows -->
+    <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/msapplication-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#000000">
 
-    <link rel="shortcut icon" type="image/x-icon" href="statics/favicon.ico">
+    <meta name="theme-color" content="#027be3">
+
+    <% for (var chunk of webpack.chunks) {
+        for (var file of chunk.files) {
+          if (file.match(/\.(js|css)$/)) { %>
+    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
   </head>
   <body>
     <noscript>
-      For some reason, it's available in javascript on your device.
+      This is your fallback content in case JavaScript fails to load.
     </noscript>
     <div id="q-app"></div>
     <!-- Todo: only include in production -->

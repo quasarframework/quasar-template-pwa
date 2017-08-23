@@ -1,17 +1,17 @@
 var
+  fs = require('fs'),
+  path = require('path'),
   config = require('../config'),
   webpack = require('webpack'),
   merge = require('webpack-merge'),
   cssUtils = require('./css-utils'),
   baseWebpackConfig = require('./webpack.base.conf'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'),
-  fs = require('fs'),
-  path = require('path')
+  FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
-  baseWebpackConfig.entry[name] = ['./build/hot-reload'].concat(baseWebpackConfig.entry[name])
+  baseWebpackConfig.entry[name] = ['./build/hot-reload.js', baseWebpackConfig.entry[name]]
 })
 
 module.exports = merge(baseWebpackConfig, {
@@ -40,8 +40,5 @@ module.exports = merge(baseWebpackConfig, {
     new FriendlyErrorsPlugin({
       clearConsole: config.dev.clearConsoleOnRebuild
     })
-  ],
-  performance: {
-    hints: false
-  }
+  ]
 })

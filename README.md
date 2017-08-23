@@ -1,9 +1,9 @@
-*** WORK IN PROGRESS; NOT READY ***
+**WORK IN PROGRESS**
 
 ![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
 
 # Quasar Framework PWA App Template
-> Default Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.9+
+> PWA Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.14+
 
 ## Usage
 Use Quasar CLI to generate a new project using this template:
