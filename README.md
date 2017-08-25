@@ -28,18 +28,6 @@ $ quasar dev
 
 - Check out the [official Quasar guide](http://quasar-framework.org/guide/) for general information about Quasar that is not specific to this template.
 
-## Usage
-
-This is a project template for [quasar-cli](https://github.com/quasarframework/quasar-cli). **It is recommended to use npm 3+ or [yarn](https://yarnpkg.com) for a more efficient dependency tree.**
-
-``` bash
-$ npm install -g vue-cli
-$ vue init pwa my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
-
 ## What's Included
 
 * Service Worker precaching of application shell + static assets (prod)
