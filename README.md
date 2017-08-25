@@ -1,7 +1,9 @@
 ![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
 
 # Quasar Framework PWA App Template
-> PWA Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.14+
+> PWA Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.14+.
+
+Based on the work of Addy Osmani (https://github.com/vuejs-templates/pwa).
 
 ## Usage
 Use Quasar CLI to generate a new project using this template:
