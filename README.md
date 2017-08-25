@@ -1,5 +1,3 @@
-**WORK IN PROGRESS**
-
 ![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
 
 # Quasar Framework PWA App Template
@@ -9,8 +7,59 @@
 Use Quasar CLI to generate a new project using this template:
 
 ``` bash
-$ quasar init pwa <folder-name>
+# install Quasar CLI if you don't have it already
+$ npm install -g quasar-cli
+
+# generate a project folder with this template
+$ quasar init pwa my-project
+
+$ cd my-project
+$ npm install
+$ quasar dev
 ```
+
+> Important! Do not use Quasar wrappers (Cordova/Electron) on top of this template.
+
+## Documentation
+
+- This template builds on top of the main/default Quasar webpack template.
+
+- Check out the [official Quasar guide](http://quasar-framework.org/guide/) for general information about Quasar that is not specific to this template.
+
+## Usage
+
+This is a project template for [quasar-cli](https://github.com/quasarframework/quasar-cli). **It is recommended to use npm 3+ or [yarn](https://yarnpkg.com) for a more efficient dependency tree.**
+
+``` bash
+$ npm install -g vue-cli
+$ vue init pwa my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
+
+## What's Included
+
+* Service Worker precaching of application shell + static assets (prod)
+* Script (async chunk) preloading using `<link rel="preload">`
+* Web Application Manifest + favicons
+* Mobile-friendly meta-viewport
+* Lighthouse score of 90+/100
+
+- `$ quasar dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
+
+- `$ quasar build`: Production ready build.
+  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+  - Use `npm run build --report`to build with bundle size analytics.
+  - Generates a Service Worker for offline caching your static assets using [sw-precache-webpack-plugin](https://www.npmjs.com/package/sw-precache-webpack-plugin)
 
 # Quasar Framework
 > Build responsive websites and hybrid mobile Apps (that look native!) using same code, with VueJs.
@@ -53,14 +102,6 @@ I'm excited if you want to contribute to Quasar under any form (report bugs, wri
 - If your issue is resolved but still open, don’t hesitate to close it. In case you found a solution by yourself, it could be helpful to explain how you fixed it.
 
 Read more [here](http://quasar-framework.org/guide/contributing.html).
-
-## Quasar Play App
-
-Instead of using mobile emulators for testing your Quasar Apps, use this App instead. You can develop apps directly on your phone/tablet (hot reload supported!), without even installing your app.
-
-Currently only on [Google Play](https://play.google.com/store/apps/details?id=com.quasarframework.quasarplay&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1). Requiring funding to pay fees on Apple Store and release the iOS counterpart too.
-
-Check its repo here: [Quasar Play](https://github.com/quasarframework/quasar-play).
 
 ## License
 
