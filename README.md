@@ -1,7 +1,7 @@
 ![Quasar Framework logo](https://cdn.rawgit.com/quasarframework/quasar-art/863c14bd/dist/svg/quasar-logo-full-inline.svg)
 
 # Quasar Framework PWA App Template
-> PWA Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.14+.
+> [PWA](https://developers.google.com/web/progressive-web-apps/) Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.14+.
 
 Based on the work of Addy Osmani (https://github.com/vuejs-templates/pwa).
 
@@ -27,18 +27,6 @@ $ quasar dev
 - This template builds on top of the main/default Quasar webpack template.
 
 - Check out the [official Quasar guide](http://quasar-framework.org/guide/) for general information about Quasar that is not specific to this template.
-
-## Usage
-
-This is a project template for [quasar-cli](https://github.com/quasarframework/quasar-cli). **It is recommended to use npm 3+ or [yarn](https://yarnpkg.com) for a more efficient dependency tree.**
-
-``` bash
-$ npm install -g vue-cli
-$ vue init pwa my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
 
 ## What's Included
 
