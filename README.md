@@ -69,10 +69,6 @@ $ npm run dev
 ## Supporting Quasar
 Quasar Framework is an MIT-licensed open source project. Its ongoing development is made possible thanks to the support by these awesome [backers](https://github.com/rstoenescu/quasar-framework/blob/dev/backers.md). If you'd like to join them, check out [Quasar Framework's Patreon campaign](https://www.patreon.com/quasarframework).
 
-## Documentation
-
-Head on to the Quasar Framework official website: [http://quasar-framework.org](http://quasar-framework.org)
-
 ## Community Forum
 
 Head on to the official community forum: [http://forum.quasar-framework.org](http://forum.quasar-framework.org)
