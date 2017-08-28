@@ -12,7 +12,7 @@ var
   SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin'),
   fsUtils = require('./fs-utils')
 
-module.exports = merge(baseWebpackConfig, {
+var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: cssUtils.styleRules({
       sourceMap: config.build.productionSourceMap,
@@ -97,3 +97,11 @@ module.exports = merge(baseWebpackConfig, {
     })
   ]
 })
+
+// add bundleAnalyzerReport if run with `npm build --report`
+if (config.build.bundleAnalyzerReport) {
+  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+}
+
+module.exports = webpackConfig
