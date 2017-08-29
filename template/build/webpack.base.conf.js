@@ -7,6 +7,7 @@ var
   merge = require('webpack-merge'),
   projectRoot = path.resolve(__dirname, '../'),
   ProgressBarPlugin = require('progress-bar-webpack-plugin'),
+  StylelintPlugin = require('stylelint-webpack-plugin'),
   useCssSourceMap =
     (env.dev && config.dev.cssSourceMap) ||
     (env.prod && config.build.productionSourceMap)
@@ -106,7 +107,11 @@ module.exports = {
     }),
     new ProgressBarPlugin({
       format: config.progressFormat
-    })
+    }),
+    // Run stylelint
+    new StylelintPlugin({
+      files: ['src/**/*.vue']
+    }),
   ],
   performance: {
     hints: false
