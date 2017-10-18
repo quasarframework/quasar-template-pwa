@@ -12,8 +12,8 @@
   "dependencies": {
     "babel-runtime": "^6.25.0",
     "quasar-extras": "0.x",
-    "quasar-framework": "^0.14.4",
-    "vue": "~2.3.4",
+    "quasar-framework": "^0.14.6",
+    "vue": "^2.5.2",
     "vue-router": "^2.7.0"
   },
   "devDependencies": {
@@ -60,7 +60,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^13.0.5",
     "vue-style-loader": "^3.0.3",
-    "vue-template-compiler": "~2.3.4",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.19.1",
