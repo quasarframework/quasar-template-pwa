@@ -9,7 +9,7 @@ var
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
-  SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin'),
+  WorkboxWebpackPlugin = require('workbox-webpack-plugin'),
   fsUtils = require('./fs-utils')
 
 module.exports = merge(baseWebpackConfig, {
@@ -88,12 +88,31 @@ module.exports = merge(baseWebpackConfig, {
       }
     ]),
     // service worker caching
-    new SWPrecacheWebpackPlugin({
+    new WorkboxWebpackPlugin({
       cacheId: 'my-quasar-app',
-      filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,woff,ttf,eof,woff2,json,svg,gif,jpg,png,mp3}'],
       minify: true,
-      stripPrefix: 'dist/'
+      globDirectory: path.resolve(__dirname, '../dist'),
+      globPatterns: ['**/*.{js,html,css,woff,ttf,eof,woff2,json,svg,gif,jpg,png,mp3,txt}'],
+      swDest: path.resolve(__dirname, '../dist/service-worker.js'),
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('https://fonts.googleapis.com'),
+          handler: 'cacheFirst',
+          options: {
+            cacheName: 'fonts'
+          }
+        },
+        {
+          urlPattern: /\.(?:svg|png|gif|jpg)$/,
+          handler: 'cacheFirst',
+          options: {
+            cacheName: 'images',
+            cacheExpiration: { maxEntries: 50 }
+          }
+        }
+      ]
     })
   ]
 })
