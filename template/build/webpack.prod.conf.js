@@ -98,7 +98,7 @@ module.exports = merge(baseWebpackConfig, {
       skipWaiting: true,
       runtimeCaching: [
         {
-          urlPattern: new RegExp('https://fonts.googleapis.com'),
+          urlPattern: new RegExp('https://fonts.'),
           handler: 'cacheFirst',
           options: {
             cacheName: 'fonts'
@@ -109,7 +109,14 @@ module.exports = merge(baseWebpackConfig, {
           handler: 'cacheFirst',
           options: {
             cacheName: 'images',
-            cacheExpiration: { maxEntries: 50 }
+            cacheExpiration: {maxEntries: 50}
+          }
+        },
+        {
+          urlPattern: new RegExp('https://unpkg.com/ionicons'),
+          handler: 'cacheFirst',
+          options: {
+            cacheName: 'ionicons'
           }
         }
       ]
