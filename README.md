@@ -5,6 +5,8 @@
 
 Based on the work of Addy Osmani (https://github.com/vuejs-templates/pwa).
 
+> **DEPRECATED FOR v0.15+**
+
 ## Usage
 Use Quasar CLI to generate a new project using this template:
 
