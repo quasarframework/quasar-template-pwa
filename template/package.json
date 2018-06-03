@@ -1,8 +1,9 @@
 {
-  "name": "quasar-app",
+  "name": "quasar-pwa-app",
+  "productName": "Quasar PWA App",
   "version": "0.0.1",
-  "description": "A Quasar App",
-  "author": "Your Name",
+  "description": "A Quasar PWA App",
+  "author": "Your Name <your@email.com>",
   "scripts": {
     "clean": "node build/script.clean.js",
     "dev": "node build/script.dev.js",
